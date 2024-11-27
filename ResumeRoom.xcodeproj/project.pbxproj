@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		BC80C2F02CF6900900893D51 /* ResumeRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC80C3042CF691A300893D51 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +33,7 @@
 		BC80C2E72CF6900900893D51 = {
 			isa = PBXGroup;
 			children = (
+				BC80C3042CF691A300893D51 /* Platform */,
 				BC80C2F22CF6900900893D51 /* ResumeRoom */,
 				BC80C2F12CF6900900893D51 /* Products */,
 			);
