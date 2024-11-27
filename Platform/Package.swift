@@ -14,10 +14,20 @@ let package = Package(
       name: "DesignKit",
       targets: ["DesignKit"]
     ),
+    .library(
+      name: "DesignSystem",
+      targets: ["DesignSystem"]
+    ),
   ],
   targets: [
     .target(
       name: "DesignKit"
+    ),
+    .target(
+      name: "DesignSystem",
+      dependencies: [
+        "DesignKit"
+      ]
     ),
   ]
 )
