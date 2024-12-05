@@ -8,13 +8,6 @@
 import DesignKit
 import SwiftUI
 
-private struct ColorStyleKey: EnvironmentKey {
-  static let defaultValue = ColorStyle.standard
-}
-
 public extension EnvironmentValues {
-  var colorStyle: ColorStyle {
-    get { self[ColorStyleKey.self] }
-    set { self[ColorStyleKey.self] = newValue }
-  }
+  @Entry var colorStyle = ColorStyle.standard
 }
