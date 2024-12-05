@@ -6,13 +6,19 @@
 //
 
 import Foundation
+import SwiftData
 
-public struct ApplyStatus: Identifiable, Hashable, Sendable {
-  public let id: UUID
-  public let status: String
-  public let hexColor: String
+@Model
+public final class ApplyStatus {
+  public var id: UUID?
+  public var status: String?
+  public var hexColor: String?
   
-  public init(id: UUID, status: String, hexColor: String) {
+  public init(
+    id: UUID? = nil,
+    status: String? = nil,
+    hexColor: String? = nil
+  ) {
     self.id = id
     self.status = status
     self.hexColor = hexColor
