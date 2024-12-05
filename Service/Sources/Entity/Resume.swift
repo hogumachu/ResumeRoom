@@ -17,13 +17,17 @@ public final class Resume {
   public var contents: String? // TODO: - 변경하기
   public var folder: Folder?
   
+  @Relationship(deleteRule: .cascade)
+  public var companies: [Company]?
+  
   public init(
     id: UUID? = nil,
     title: String? = nil,
     createdAt: Date? = nil,
     updatedAt: Date? = nil,
     contents: String? = nil,
-    folder: Folder? = nil
+    folder: Folder? = nil,
+    companies: [Company]? = nil
   ) {
     self.id = id
     self.title = title
@@ -31,5 +35,6 @@ public final class Resume {
     self.updatedAt = updatedAt
     self.contents = contents
     self.folder = folder
+    self.companies = companies
   }
 }
