@@ -12,7 +12,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		342ED2152D01D488000DDDC2 /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Service; path = /Users/hongsungjun/Develop/iOS/ResumeRoom/Service; sourceTree = "<absolute>"; };
+		342ED2152D01D488000DDDC2 /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Service; sourceTree = "<group>"; };
 		BC80C2F02CF6900900893D51 /* ResumeRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC80C3042CF691A300893D51 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 /* End PBXFileReference section */
