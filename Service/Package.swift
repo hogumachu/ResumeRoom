@@ -15,6 +15,10 @@ let package = Package(
       targets: ["Entity"]
     ),
     .library(
+      name: "ResumeService",
+      targets: ["ResumeService"]
+    ),
+    .library(
       name: "Storage",
       targets: ["Storage"]
     ),
@@ -22,6 +26,9 @@ let package = Package(
   targets: [
     .target(
       name: "Entity"
+    ),
+    .target(
+      name: "ResumeService"
     ),
     .target(
       name: "Storage",
