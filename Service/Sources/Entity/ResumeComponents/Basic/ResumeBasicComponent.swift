@@ -5,7 +5,7 @@
 //  Created by 홍성준 on 12/6/24.
 //
 
-import Foundation
+import SwiftUI
 
 public enum ResumeBasicComponent {
   case text(ResumeTextComponent)
@@ -19,5 +19,7 @@ public enum ResumeBasicComponent {
 }
 
 extension ResumeBasicComponent: ResumeComponentSectionable {
-  public static let sectionTitle = "기본 블록"
+  public static var sectionTitle: LocalizedStringKey {
+    "component.basic.section-title"
+  }
 }

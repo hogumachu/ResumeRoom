@@ -5,7 +5,7 @@
 //  Created by 홍성준 on 12/6/24.
 //
 
-import Foundation
+import SwiftUI
 
 public struct ResumeTextComponent {
   public let text: String
@@ -16,6 +16,11 @@ public struct ResumeTextComponent {
 }
 
 extension ResumeTextComponent: ResumeComponentable {
-  public static let title = "텍스트"
-  public static let description = "일반 텍스트를 사용해 쓰기를 시작하세요."
+  public static var title: LocalizedStringKey {
+    "component.text.title"
+  }
+  
+  public static var description: LocalizedStringKey {
+    "component.text.description"
+  }
 }

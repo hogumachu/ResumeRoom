@@ -5,7 +5,7 @@
 //  Created by 홍성준 on 12/6/24.
 //
 
-import Foundation
+import SwiftUI
 
 public struct ResumeHeader2Component {
   public let text: String
@@ -16,6 +16,11 @@ public struct ResumeHeader2Component {
 }
 
 extension ResumeHeader2Component: ResumeComponentable {
-  public static let title = "제목2"
-  public static let description = "섹션 제목(중)"
+  public static var title: LocalizedStringKey {
+    "component.header2.title"
+  }
+  
+  public static var description: LocalizedStringKey {
+    "component.header2.description"
+  }
 }

@@ -5,7 +5,7 @@
 //  Created by 홍성준 on 12/6/24.
 //
 
-import Foundation
+import SwiftUI
 
 public struct ResumeImageComponent {
   public let url: String
@@ -16,6 +16,11 @@ public struct ResumeImageComponent {
 }
 
 extension ResumeImageComponent: ResumeComponentable {
-  public static let title = "이미지"
-  public static let description = "링크를 통해 이미지를 추가하세요."
+  public static var title: LocalizedStringKey {
+    "component.image.title"
+  }
+  
+  public static var description: LocalizedStringKey {
+    "component.image.description"
+  }
 }
