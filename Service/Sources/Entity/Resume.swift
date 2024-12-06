@@ -14,7 +14,7 @@ public final class Resume {
   public var title: String?
   public var createdAt: Date?
   public var updatedAt: Date?
-  public var contents: String? // TODO: - 변경하기
+  public var contents: [ResumeComponent]? // TODO: - 변경하기
   public var folder: Folder?
   
   @Relationship(deleteRule: .cascade)
@@ -25,7 +25,7 @@ public final class Resume {
     title: String? = nil,
     createdAt: Date? = nil,
     updatedAt: Date? = nil,
-    contents: String? = nil,
+    contents: [ResumeComponent]? = nil,
     folder: Folder? = nil,
     companies: [Company]? = nil
   ) {
