@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "Service",
+  defaultLocalization: "en",
   platforms: [
     .iOS(.v17),
     .macOS(.v14)
@@ -21,7 +22,10 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "Entity"
+      name: "Entity",
+      resources: [
+        .process("Resources")
+      ]
     ),
     .target(
       name: "Storage",
