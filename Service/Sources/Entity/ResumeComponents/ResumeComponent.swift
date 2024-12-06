@@ -9,4 +9,5 @@ import Foundation
 
 public enum ResumeComponent: Hashable, Codable {
   case basic(ResumeBasicComponent)
+  case media(ResumeMediaComponent)
 }

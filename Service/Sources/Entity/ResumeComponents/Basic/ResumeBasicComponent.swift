@@ -14,6 +14,8 @@ public enum ResumeBasicComponent {
   case header2(ResumeHeader2Component)
   case header3(ResumeHeader3Component)
   case bullet(ResumeBulletComponent)
+  case quote(ResumeQuoteComponent)
+  case separator(ResumeSeparatorComponent)
 }
 
 extension ResumeBasicComponent: ResumeComponentSectionable {
