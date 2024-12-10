@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct ResumeHeader1Componet {
+public struct ResumeHeader1Component {
   public let text: String
   
   public init(text: String) {
@@ -15,7 +15,7 @@ public struct ResumeHeader1Componet {
   }
 }
 
-extension ResumeHeader1Componet: ResumeComponentable {
+extension ResumeHeader1Component: ResumeComponentable {
   public static var title: LocalizedStringKey {
     "component.header1.title"
   }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public protocol ResumeComponentable: Hashable, Codable {
+public protocol ResumeComponentable: Componentable {
   static var title: LocalizedStringKey { get }
   static var description: LocalizedStringKey { get }
 }

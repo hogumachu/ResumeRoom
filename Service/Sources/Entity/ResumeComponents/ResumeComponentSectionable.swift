@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-public protocol ResumeComponentSectionable: Hashable, Codable {
+public protocol ResumeComponentSectionable: Componentable {
   static var sectionTitle: LocalizedStringKey { get }
 }
