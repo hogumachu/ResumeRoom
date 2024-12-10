@@ -16,15 +16,29 @@ let package = Package(
       targets: ["Entity"]
     ),
     .library(
+      name: "PDFService",
+      targets: ["PDFService"]
+    ),
+    .library(
       name: "Storage",
       targets: ["Storage"]
     ),
+  ],
+  dependencies: [
+    .package(name: "DesignSystem", path: "Platform")
   ],
   targets: [
     .target(
       name: "Entity",
       resources: [
         .process("Resources")
+      ]
+    ),
+    .target(
+      name: "PDFService",
+      dependencies: [
+        "DesignSystem",
+        "Entity"
       ]
     ),
     .target(
