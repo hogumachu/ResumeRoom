@@ -10,7 +10,7 @@ import SwiftUI
 public enum ResumeBasicComponent {
   case text(ResumeTextComponent)
   case todo(ResumeTodoComponent)
-  case header1(ResumeHeader1Componet)
+  case header1(ResumeHeader1Component)
   case header2(ResumeHeader2Component)
   case header3(ResumeHeader3Component)
   case bullet(ResumeBulletComponent)
