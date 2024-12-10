@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ResumeComponent: Hashable, Codable {
+public enum ResumeComponent: Componentable {
   case basic(ResumeBasicComponent)
   case media(ResumeMediaComponent)
 }
