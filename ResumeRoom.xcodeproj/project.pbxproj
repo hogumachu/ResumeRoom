@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BCEAC7922D7A966500652281 /* PresentationKit in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC7912D7A966500652281 /* PresentationKit */; };
+		BCEAC7982D7A9BA500652281 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC7972D7A9BA500652281 /* Home */; };
+		BCEAC81B2D7AC08900652281 /* Calendar in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC81A2D7AC08900652281 /* Calendar */; };
+		BCEAC81D2D7AC65E00652281 /* Setting in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC81C2D7AC65E00652281 /* Setting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BCEAC7782D7A880100652281 /* ResumeRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEAC7892D7A88C300652281 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
+		BCEAC7932D7A97F900652281 /* Feature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Feature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -29,6 +33,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCEAC7922D7A966500652281 /* PresentationKit in Frameworks */,
+				BCEAC81D2D7AC65E00652281 /* Setting in Frameworks */,
+				BCEAC81B2D7AC08900652281 /* Calendar in Frameworks */,
+				BCEAC7982D7A9BA500652281 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +45,7 @@
 		BCEAC76F2D7A880100652281 = {
 			isa = PBXGroup;
 			children = (
+				BCEAC7932D7A97F900652281 /* Feature */,
 				BCEAC7892D7A88C300652281 /* Shared */,
 				BCEAC77A2D7A880100652281 /* ResumeRoom */,
 				BCEAC7902D7A966500652281 /* Frameworks */,
@@ -81,6 +89,9 @@
 			name = ResumeRoom;
 			packageProductDependencies = (
 				BCEAC7912D7A966500652281 /* PresentationKit */,
+				BCEAC7972D7A9BA500652281 /* Home */,
+				BCEAC81A2D7AC08900652281 /* Calendar */,
+				BCEAC81C2D7AC65E00652281 /* Setting */,
 			);
 			productName = ResumeRoom;
 			productReference = BCEAC7782D7A880100652281 /* ResumeRoom.app */;
@@ -280,9 +291,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hogumachu.ResumeRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,9 +326,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hogumachu.ResumeRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,6 +368,18 @@
 		BCEAC7912D7A966500652281 /* PresentationKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationKit;
+		};
+		BCEAC7972D7A9BA500652281 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+		BCEAC81A2D7AC08900652281 /* Calendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Calendar;
+		};
+		BCEAC81C2D7AC65E00652281 /* Setting */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Setting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
