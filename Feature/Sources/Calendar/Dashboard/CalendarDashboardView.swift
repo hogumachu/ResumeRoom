@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import DesignSystem
+
 import ComposableArchitecture
 
 public struct CalendarDashboardView: View {
@@ -17,6 +19,9 @@ public struct CalendarDashboardView: View {
   }
   
   public var body: some View {
-    Text("Calendar Dashboard")
+    VStack {
+      Text("Calendar Dashboard")
+        .font(.pretendard(.black, size: 21))
+    }
   }
 }
