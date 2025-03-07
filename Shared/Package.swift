@@ -11,8 +11,13 @@ let package = Package(
   ],
   products: [
     .library(
+      name: "DesignSystem",
+      targets: ["DesignSystem"]
+    ),
+    .library(
       name: "PresentationKit",
-      targets: ["PresentationKit"]),
+      targets: ["PresentationKit"]
+    ),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.12.0"),
@@ -21,9 +26,16 @@ let package = Package(
   ],
   targets: [
     .target(
+      name: "DesignSystem",
+      resources: [
+        .process("Resources")
+      ]
+    ),
+    .target(
       name: "PresentationKit",
       dependencies: [
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        "DesignSystem",
         "TCACoordinators"
       ]
     ),
