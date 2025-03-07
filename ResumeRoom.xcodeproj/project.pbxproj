@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BCEAC7922D7A966500652281 /* PresentationKit in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC7912D7A966500652281 /* PresentationKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BCEAC7782D7A880100652281 /* ResumeRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCEAC7892D7A88C300652281 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEAC7922D7A966500652281 /* PresentationKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +38,9 @@
 		BCEAC76F2D7A880100652281 = {
 			isa = PBXGroup;
 			children = (
+				BCEAC7892D7A88C300652281 /* Shared */,
 				BCEAC77A2D7A880100652281 /* ResumeRoom */,
+				BCEAC7902D7A966500652281 /* Frameworks */,
 				BCEAC7792D7A880100652281 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +51,13 @@
 				BCEAC7782D7A880100652281 /* ResumeRoom.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BCEAC7902D7A966500652281 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +80,7 @@
 			);
 			name = ResumeRoom;
 			packageProductDependencies = (
+				BCEAC7912D7A966500652281 /* PresentationKit */,
 			);
 			productName = ResumeRoom;
 			productReference = BCEAC7782D7A880100652281 /* ResumeRoom.app */;
@@ -251,7 +267,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ResumeRoom/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ResumeRoom/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 62ZLDXLZ77;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ResumeRoom/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ResumeRoom/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 62ZLDXLZ77;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -324,6 +340,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCEAC7912D7A966500652281 /* PresentationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BCEAC7702D7A880100652281 /* Project object */;
 }
