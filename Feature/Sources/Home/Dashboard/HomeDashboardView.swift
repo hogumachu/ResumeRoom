@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import DesignSystem
+
 import ComposableArchitecture
 
 public struct HomeDashboardView: View {
@@ -18,5 +20,6 @@ public struct HomeDashboardView: View {
   
   public var body: some View {
     Text("Home Dashboard")
+      .meshGradientBackground()
   }
 }

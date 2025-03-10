@@ -9,7 +9,34 @@ import SwiftUI
 
 public extension Font {
   
-  enum PretendardWeight {
+  // TODO: - Dynamic Size, 
+  
+  static let captionM = Font.pretendard(.medium, size: 12)
+  static let captionR = Font.pretendard(.regular, size: 12)
+  static let captionSB = Font.pretendard(.semiBold, size: 12)
+  static let captionB = Font.pretendard(.bold, size: 12)
+  
+  static let bodyM = Font.pretendard(.medium, size: 17)
+  static let bodyR = Font.pretendard(.regular, size: 17)
+  static let bodySB = Font.pretendard(.semiBold, size: 17)
+  static let bodyB = Font.pretendard(.bold, size: 17)
+  
+  static let headerM = Font.pretendard(.medium, size: 21)
+  static let headerR = Font.pretendard(.regular, size: 21)
+  static let headerSB = Font.pretendard(.semiBold, size: 21)
+  static let headerB = Font.pretendard(.bold, size: 21)
+  
+  static let largeHeaderM = Font.pretendard(.medium, size: 26)
+  static let largeHeaderR = Font.pretendard(.regular, size: 26)
+  static let largeHeaderSB = Font.pretendard(.semiBold, size: 26)
+  static let largeHeaderB = Font.pretendard(.bold, size: 26)
+}
+
+// MARK: - Pretendard
+
+extension Font {
+  
+  public enum PretendardWeight {
     /// 900
     case black
     /// 700
@@ -30,7 +57,7 @@ public extension Font {
     case thin
   }
   
-  static func pretendard(_ weight: PretendardWeight, size: CGFloat) -> Font {
+  public static func pretendard(_ weight: PretendardWeight, size: CGFloat) -> Font {
     switch weight {
     case .black: return DesignSystemFont.Pretendard.black.font(size)
     case .bold: return DesignSystemFont.Pretendard.bold.font(size)
