@@ -3,6 +3,27 @@
 
 import PackageDescription
 
+typealias Dependency = PackageDescription.Package.Dependency
+typealias TargetDependency = PackageDescription.Target.Dependency
+
+#if os(macOS)
+let dependency: [Dependency] = [
+  .package(path: "../Shared"),
+]
+let calendarDependency: [TargetDependency] = [
+  .product(name: "PresentationKit", package: "Shared"),
+]
+#else
+let dependency: [Dependency] = [
+  .package(path: "../Shared"),
+  .package(url: "https://github.com/airbnb/HorizonCalendar", from: "2.0.0")
+]
+let calendarDependency: [TargetDependency] = [
+  .product(name: "PresentationKit", package: "Shared"),
+  "HorizonCalendar"
+]
+#endif
+
 let package = Package(
   name: "Feature",
   platforms: [
@@ -23,17 +44,11 @@ let package = Package(
       targets: ["Setting"]
     ),
   ],
-  dependencies: [
-    .package(path: "../Shared"),
-    .package(url: "https://github.com/airbnb/HorizonCalendar", from: "2.0.0")
-  ],
+  dependencies: dependency,
   targets: [
     .target(
       name: "Calendar",
-      dependencies: [
-        .product(name: "PresentationKit", package: "Shared"),
-        "HorizonCalendar"
-      ]
+      dependencies: calendarDependency
     ),
     .target(
       name: "Home",
