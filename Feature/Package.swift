@@ -24,13 +24,15 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(path: "../Shared")
+    .package(path: "../Shared"),
+    .package(url: "https://github.com/airbnb/HorizonCalendar", from: "2.0.0")
   ],
   targets: [
     .target(
       name: "Calendar",
       dependencies: [
-        .product(name: "PresentationKit", package: "Shared")
+        .product(name: "PresentationKit", package: "Shared"),
+        "HorizonCalendar"
       ]
     ),
     .target(
