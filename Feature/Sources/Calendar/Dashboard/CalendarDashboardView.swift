@@ -12,16 +12,14 @@ import DesignSystem
 import ComposableArchitecture
 
 public struct CalendarDashboardView: View {
-  private let store: StoreOf<CalendarDashboardStore>
+  @Bindable private var store: StoreOf<CalendarDashboardStore>
   
   public init(store: StoreOf<CalendarDashboardStore>) {
     self.store = store
   }
   
   public var body: some View {
-    VStack {
-      Text("Calendar Dashboard")
-        .font(.pretendard(.black, size: 21))
-    }
+    CalendarContentView(date: $store.date)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
 }
