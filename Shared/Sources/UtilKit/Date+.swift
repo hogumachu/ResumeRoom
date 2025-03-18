@@ -32,7 +32,7 @@ public extension Date {
     guard let startOfMonth = startOfMonth() else { return nil }
     return calendar.date(
       byAdding: .init(month: 1, day: -1),
-      to: self
+      to: startOfMonth
     )
   }
   
