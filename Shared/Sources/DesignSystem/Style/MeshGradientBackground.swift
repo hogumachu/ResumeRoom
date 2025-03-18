@@ -33,15 +33,15 @@ private struct MeshGradientBackgroundModifier: ViewModifier {
           .init(1, 1)
         ],
         colors: [
-          DynamicColor.primary.scheme(colorScheme).opacity(0.5),
+          DynamicColor.primary.scheme(colorScheme).opacity(0.3),
           DynamicColor.background.scheme(colorScheme),
           DynamicColor.background.scheme(colorScheme),
           DynamicColor.background.scheme(colorScheme),
-          DynamicColor.secondary.scheme(colorScheme).opacity(0.2),
+          DynamicColor.secondary.scheme(colorScheme).opacity(0.1),
           DynamicColor.background.scheme(colorScheme),
           DynamicColor.background.scheme(colorScheme),
           DynamicColor.background.scheme(colorScheme),
-          DynamicColor.tertiary.scheme(colorScheme).opacity(0.5),
+          DynamicColor.tertiary.scheme(colorScheme).opacity(0.3),
         ]
       )
       .ignoresSafeArea()
