@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+import DesignSystem
+
 struct SplashView: View {
   var body: some View {
     Text("Splash View")
+      .meshGradientBackground()
   }
 }

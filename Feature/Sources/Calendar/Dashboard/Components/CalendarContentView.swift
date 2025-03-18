@@ -32,6 +32,7 @@ struct CalendarContentView: View {
       monthsLayout: .horizontal,
       dataDependency: nil
     )
+    .backgroundColor(.clear)
     .days(days)
     .onDaySelection { onDaySelection($0.components) }
     .meshGradientBackground()
