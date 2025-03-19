@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC32B3232D8A680600142847 /* Database in Frameworks */ = {isa = PBXBuildFile; productRef = BC32B3222D8A680600142847 /* Database */; };
 		BCEAC7922D7A966500652281 /* PresentationKit in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC7912D7A966500652281 /* PresentationKit */; };
 		BCEAC7982D7A9BA500652281 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC7972D7A9BA500652281 /* Home */; };
 		BCEAC81B2D7AC08900652281 /* Calendar in Frameworks */ = {isa = PBXBuildFile; productRef = BCEAC81A2D7AC08900652281 /* Calendar */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC32B3232D8A680600142847 /* Database in Frameworks */,
 				BCEAC7922D7A966500652281 /* PresentationKit in Frameworks */,
 				BCEAC81D2D7AC65E00652281 /* Setting in Frameworks */,
 				BCEAC81B2D7AC08900652281 /* Calendar in Frameworks */,
@@ -92,6 +94,7 @@
 				BCEAC7972D7A9BA500652281 /* Home */,
 				BCEAC81A2D7AC08900652281 /* Calendar */,
 				BCEAC81C2D7AC65E00652281 /* Setting */,
+				BC32B3222D8A680600142847 /* Database */,
 			);
 			productName = ResumeRoom;
 			productReference = BCEAC7782D7A880100652281 /* ResumeRoom.app */;
@@ -365,6 +368,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BC32B3222D8A680600142847 /* Database */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Database;
+		};
 		BCEAC7912D7A966500652281 /* PresentationKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationKit;

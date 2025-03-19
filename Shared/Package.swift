@@ -11,6 +11,10 @@ let package = Package(
   ],
   products: [
     .library(
+      name: "Database",
+      targets: ["Database"]
+    ),
+    .library(
       name: "DesignSystem",
       targets: ["DesignSystem"]
     ),
@@ -24,11 +28,19 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.12.0"),
+    .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.4.0"),
+    .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.18.0"),
     .package(url: "https://github.com/johnpatrickmorgan/TCACoordinators", from: "0.11.0"),
     
   ],
   targets: [
+    .target(
+      name: "Database",
+      dependencies: [
+        .product(name: "Dependencies", package: "swift-dependencies"),
+        .product(name: "DependenciesMacros", package: "swift-dependencies"),
+      ]
+    ),
     .target(
       name: "DesignSystem",
       resources: [
@@ -39,6 +51,7 @@ let package = Package(
       name: "PresentationKit",
       dependencies: [
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        "Database",
         "DesignSystem",
         "TCACoordinators",
         "UtilKit"
