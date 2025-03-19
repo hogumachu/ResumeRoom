@@ -32,7 +32,7 @@ private func makeLiveContainer(url: URL) -> ModelContainer {
 }
 
 private let liveContainer: ModelContainer = makeLiveContainer(
-  url: URL.applicationSupportDirectory.appending(path: "Models.sqlite")
+  url: URL.applicationSupportDirectory.appending(path: "models.sqlite")
 )
 
 private let memoryContainer: ModelContainer = try! makeInMemoryContainer()

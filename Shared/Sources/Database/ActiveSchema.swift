@@ -8,5 +8,3 @@
 import Foundation
 
 public typealias ActiveSchema = SchemaV1
-public typealias ResumeModel = ActiveSchema.ResumeModel
-public typealias Resume = ActiveSchema.Resume

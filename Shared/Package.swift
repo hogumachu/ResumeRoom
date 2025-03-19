@@ -19,8 +19,16 @@ let package = Package(
       targets: ["DesignSystem"]
     ),
     .library(
+      name: "Entity",
+      targets: ["Entity"]
+    ),
+    .library(
       name: "PresentationKit",
       targets: ["PresentationKit"]
+    ),
+    .library(
+      name: "Repository",
+      targets: ["Repository"]
     ),
     .library(
       name: "UtilKit",
@@ -37,6 +45,7 @@ let package = Package(
     .target(
       name: "Database",
       dependencies: [
+        "Entity",
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "DependenciesMacros", package: "swift-dependencies"),
       ]
@@ -48,13 +57,22 @@ let package = Package(
       ]
     ),
     .target(
+      name: "Entity"
+    ),
+    .target(
       name: "PresentationKit",
       dependencies: [
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-        "Database",
         "DesignSystem",
+        "Repository",
         "TCACoordinators",
         "UtilKit"
+      ]
+    ),
+    .target(
+      name: "Repository",
+      dependencies: [
+        "Database"
       ]
     ),
     .target(

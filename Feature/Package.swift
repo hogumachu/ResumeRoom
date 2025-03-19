@@ -39,7 +39,7 @@ let package = Package(
     .target(
       name: "Home",
       dependencies: [
-        .product(name: "PresentationKit", package: "Shared")
+        .product(name: "PresentationKit", package: "Shared"),
       ]
     ),
     .target(
