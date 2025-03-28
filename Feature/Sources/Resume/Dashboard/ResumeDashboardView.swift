@@ -8,9 +8,9 @@
 import SwiftUI
 
 import DesignSystem
+import MarkupEditorKit
 
 import ComposableArchitecture
-import MarkupEditorKit
 
 public struct ResumeDashboardView: View {
   @Bindable private var store: StoreOf<ResumeDashboardStore>
@@ -20,7 +20,10 @@ public struct ResumeDashboardView: View {
   }
   
   public var body: some View {
-    EmptyView()
-      .meshGradientBackground()
+    MarkupView(
+      html: $store.html,
+      placeholder: "입력해 주세요."
+    )
+    .meshGradientBackground()
   }
 }
