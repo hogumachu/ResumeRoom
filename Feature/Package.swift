@@ -20,6 +20,10 @@ let package = Package(
       targets: ["Home"]
     ),
     .library(
+      name: "Resume",
+      targets: ["Resume"]
+    ),
+    .library(
       name: "Setting",
       targets: ["Setting"]
     ),
@@ -40,6 +44,13 @@ let package = Package(
       name: "Home",
       dependencies: [
         .product(name: "PresentationKit", package: "Shared"),
+      ]
+    ),
+    .target(
+      name: "Resume",
+      dependencies: [
+        .product(name: "PresentationKit", package: "Shared"),
+        .product(name: "MarkupEditorKit", package: "Shared")
       ]
     ),
     .target(

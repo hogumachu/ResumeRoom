@@ -9,6 +9,7 @@ import Foundation
 
 import Calendar
 import Home
+import Resume
 import Setting
 
 import ComposableArchitecture
@@ -21,6 +22,7 @@ struct MainTabCoordinator {
   struct State: Equatable {
     var calendar: CalendarCoordinator.State = .init()
     var home: HomeCoordinator.State = .init()
+    var resume: ResumeCoordinator.State = .init()
     var setting: SettingCoordinator.State = .init()
     var selectedTab: Tabs = .home
   }
@@ -28,6 +30,7 @@ struct MainTabCoordinator {
   enum Action {
     case calendar(CalendarCoordinator.Action)
     case home(HomeCoordinator.Action)
+    case resume(ResumeCoordinator.Action)
     case setting(SettingCoordinator.Action)
     case tabSelected(Tabs)
   }
@@ -39,6 +42,9 @@ struct MainTabCoordinator {
     Scope(state: \.home, action: \.home) {
       HomeCoordinator()
     }
+    Scope(state: \.resume, action: \.resume) {
+      ResumeCoordinator()
+    }
     Scope(state: \.setting, action: \.setting) {
       SettingCoordinator()
     }
@@ -48,6 +54,9 @@ struct MainTabCoordinator {
         return .none
         
       case .home:
+        return .none
+        
+      case .resume:
         return .none
         
       case .setting:

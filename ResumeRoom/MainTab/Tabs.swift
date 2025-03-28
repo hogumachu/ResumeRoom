@@ -10,12 +10,14 @@ import Foundation
 enum Tabs: Equatable, Hashable {
   case calendar
   case home
+  case resume
   case setting
   
   var name: String {
     switch self {
     case .calendar: String(localized: "Calendar", comment: "Tab title")
     case .home: String(localized: "Home", comment: "Tab title")
+    case .resume: String(localized: "Resume", comment: "Tab title")
     case .setting: String(localized: "Setting", comment: "Tab title")
     }
   }
@@ -24,6 +26,7 @@ enum Tabs: Equatable, Hashable {
     switch self {
     case .calendar: "calendar"
     case .home: "house"
+    case .resume: "document"
     case .setting: "gear"
     }
   }

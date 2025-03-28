@@ -23,6 +23,10 @@ let package = Package(
       targets: ["Entity"]
     ),
     .library(
+      name: "MarkupEditorKit",
+      targets: ["MarkupEditorKit"]
+    ),
+    .library(
       name: "PresentationKit",
       targets: ["PresentationKit"]
     ),
@@ -39,6 +43,7 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.4.0"),
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.18.0"),
     .package(url: "https://github.com/johnpatrickmorgan/TCACoordinators", from: "0.11.0"),
+    .package(url: "https://github.com/stevengharris/MarkupEditor", from: "0.8.3"),
     
   ],
   targets: [
@@ -58,6 +63,12 @@ let package = Package(
     ),
     .target(
       name: "Entity"
+    ),
+    .target(
+      name: "MarkupEditorKit",
+      dependencies: [
+        "MarkupEditor"
+      ]
     ),
     .target(
       name: "PresentationKit",

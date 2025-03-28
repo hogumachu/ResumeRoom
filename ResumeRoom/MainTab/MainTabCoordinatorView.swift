@@ -9,6 +9,7 @@ import SwiftUI
 
 import Calendar
 import Home
+import Resume
 import Setting
 
 import ComposableArchitecture
@@ -33,6 +34,12 @@ struct MainTabCoordinatorView: View {
       Tab(Tabs.calendar.name, systemImage: Tabs.calendar.symbol, value: .calendar) {
         CalendarCoordinatorView(
           store: store.scope(state: \.calendar, action: \.calendar)
+        )
+      }
+      
+      Tab(Tabs.resume.name, systemImage: Tabs.resume.symbol, value: .resume) {
+        ResumeCoordinatorView(
+          store: store.scope(state: \.resume, action: \.resume)
         )
       }
       
